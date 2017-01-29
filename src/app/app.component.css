@@ -1,0 +1,31 @@
+.app-title {
+  width:100%;
+  color: white;
+  background-color: rgb(12, 1, 112);
+  padding:20px;
+  margin:0
+}
+.inputs-container{
+  width:250px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: black;
+  float:left;
+  height: 100vh;
+}
+.project-info-container{
+  width: 90%;
+  padding-left: 20px;
+  padding-right: 20px
+}
+.status-select {
+  width:100%;
+  margin-top: 30px
+}
+
+.project-info {
+  margin-top: 20px;
+  margin-bot: 20px
+}

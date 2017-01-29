@@ -1,0 +1,50 @@
+
+<h1 class="app-title">
+  {{title}}
+</h1>
+<div class = "inputs-container">
+    <h2>
+      EMAIL INPUTS
+    </h2>
+    <h3>PROJECT INFORMATION</h3>
+      <div class="project-info-container">
+        <md-input-container>
+          <input md-input placeholder="PERMIT NUMBER" [(ngModel)] = "permitNumber">
+        </md-input-container><br />
+        <div class = "project-info">
+          PROJECT NAME: {{project}}
+        </div><br />
+        <div class = "project-info">
+          ADDRESS: {{address}}
+        </div>
+      </div>
+      <h3>PERMIT STATUS</h3>
+        <div class="project-info-container">
+            <md-select class="status-select" placeholder="BUILDING">
+              <md-option *ngFor = "let status of statuses">
+                {{status}}
+              </md-option>
+            </md-select><br />
+            <md-select class="status-select" placeholder="PLANNING">
+              <md-option *ngFor = "let status of statuses">
+                {{status}}
+              </md-option>
+            </md-select>
+            <md-select class="status-select" placeholder="ENGINEERING">
+              <md-option *ngFor = "let status of statuses">
+                {{status}}
+              </md-option>
+            </md-select>
+            <md-select class="status-select" placeholder="TREE">
+              <md-option *ngFor = "let status of statuses">
+                {{status}}
+              </md-option>
+            </md-select>
+            <md-select class="status-select" placeholder="FIRE">
+              <md-option *ngFor = "let status of statuses">
+                {{status}}
+              </md-option>
+            </md-select>
+        </div>
+</div>
+<app-notification-email [project]="project"></app-notification-email>
