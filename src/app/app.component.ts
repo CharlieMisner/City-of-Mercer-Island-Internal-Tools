@@ -2,8 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 class Project {
   projectName= 'A Building';
-  permitNumber = '1234-567';
-  address = 'Somewhere'
+  permitNumber = '1611-089';
+  address = 'Somewhere';
+  buildingStatus = 'WCI';
+  planningStatus = 'WCI';
+  engineeringStatus = 'APPROVED';
+  treeStatus = 'NA';
+  fireStatus = 'IN REVIEW'
 }
 
 @Component({

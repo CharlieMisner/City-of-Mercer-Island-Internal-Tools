@@ -1,50 +1,50 @@
-
-<h1 class="app-title">
-  {{title}}
-</h1>
+<div class = "title-container">
+    <h1 class="app-title">
+      {{title}}
+    </h1>
+</div>
 <div class = "inputs-container">
-    <h2>
-      Email Inputs
-    </h2>
-    <h3>Project Information</h3>
       <div class="project-info-container">
+        <h3 color="primary">Inputs</h3>
         <md-input-container>
-          <input md-input placeholder="PERMIT NUMBER" [(ngModel)] = "permitNumber">
+          <input md-input placeholder="Permit Number" [(ngModel)] = "project.permitNumber">
         </md-input-container><br />
-        <div class = "project-info">
-          Project Name: {{project}}
-        </div><br />
-        <div class = "project-info">
-          Address: {{address}}
-        </div>
+        <md-input-container>
+          <input md-input placeholder="Project Name" [(ngModel)] = "project.projectName">
+        </md-input-container><br />
+        <md-input-container>
+          <input md-input placeholder="Project Address" [(ngModel)] = "project.address">
+        </md-input-container><br />
       </div>
-      <h3>Permit Status</h3>
-        <div class="project-info-container">
-            <md-select color="primary" class="status-select" placeholder="Building Status">
-              <md-option *ngFor = "let status of statuses">
-                {{status}}
-              </md-option>
-            </md-select><br />
-            <md-select class="status-select" placeholder="Planning Status">
-              <md-option *ngFor = "let status of statuses">
-                {{status}}
-              </md-option>
-            </md-select>
-            <md-select class="status-select" placeholder="Enginering Status">
-              <md-option *ngFor = "let status of statuses">
-                {{status}}
-              </md-option>
-            </md-select>
-            <md-select class="status-select" placeholder="Tree Status">
-              <md-option *ngFor = "let status of statuses">
-                {{status}}
-              </md-option>
-            </md-select>
-            <md-select class="status-select" placeholder="Fire Status">
-              <md-option *ngFor = "let status of statuses">
-                {{status}}
-              </md-option>
-            </md-select>
-        </div>
+      <div class="project-info-container">
+        <h3>Permit Status</h3>
+        
+          <md-select [(ngModel)] = "project.buildingStatus" color="primary" class="status-select" placeholder="Building Status">
+            <md-option *ngFor = "let status of statuses" [value] = "status">
+              {{status}}
+            </md-option>
+          </md-select>
+          <md-select [(ngModel)] = "project.planningStatus" class="status-select" placeholder="Planning Status">
+            <md-option *ngFor = "let status of statuses" [value] = "status">
+              {{status}}
+            </md-option>
+          </md-select>
+          <md-select [(ngModel)] = "project.engineeringStatus" class="status-select" placeholder="Enginering Status">
+            <md-option *ngFor = "let status of statuses" [value] = "status">
+              {{status}}
+            </md-option>
+          </md-select>
+          <md-select [(ngModel)] = "project.treeStatus" class="status-select" placeholder="Tree Status">
+            <md-option *ngFor = "let status of statuses" [value] = "status">
+              {{status}}
+            </md-option>
+          </md-select>
+          <md-select [(ngModel)] = "project.fireStatus" class="status-select" placeholder="Fire Status">
+            <md-option *ngFor = "let status of statuses" [value] = "status">
+              {{status}}
+            </md-option>
+          </md-select>
+        
+      </div>
 </div>
 <app-notification-email [project]="project"></app-notification-email>
