@@ -4,43 +4,43 @@
 </h1>
 <div class = "inputs-container">
     <h2>
-      EMAIL INPUTS
+      Email Inputs
     </h2>
-    <h3>PROJECT INFORMATION</h3>
+    <h3>Project Information</h3>
       <div class="project-info-container">
         <md-input-container>
           <input md-input placeholder="PERMIT NUMBER" [(ngModel)] = "permitNumber">
         </md-input-container><br />
         <div class = "project-info">
-          PROJECT NAME: {{project}}
+          Project Name: {{project}}
         </div><br />
         <div class = "project-info">
-          ADDRESS: {{address}}
+          Address: {{address}}
         </div>
       </div>
-      <h3>PERMIT STATUS</h3>
+      <h3>Permit Status</h3>
         <div class="project-info-container">
-            <md-select class="status-select" placeholder="BUILDING">
+            <md-select color="primary" class="status-select" placeholder="Building Status">
               <md-option *ngFor = "let status of statuses">
                 {{status}}
               </md-option>
             </md-select><br />
-            <md-select class="status-select" placeholder="PLANNING">
+            <md-select class="status-select" placeholder="Planning Status">
               <md-option *ngFor = "let status of statuses">
                 {{status}}
               </md-option>
             </md-select>
-            <md-select class="status-select" placeholder="ENGINEERING">
+            <md-select class="status-select" placeholder="Enginering Status">
               <md-option *ngFor = "let status of statuses">
                 {{status}}
               </md-option>
             </md-select>
-            <md-select class="status-select" placeholder="TREE">
+            <md-select class="status-select" placeholder="Tree Status">
               <md-option *ngFor = "let status of statuses">
                 {{status}}
               </md-option>
             </md-select>
-            <md-select class="status-select" placeholder="FIRE">
+            <md-select class="status-select" placeholder="Fire Status">
               <md-option *ngFor = "let status of statuses">
                 {{status}}
               </md-option>
