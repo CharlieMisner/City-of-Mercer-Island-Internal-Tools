@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from './project';
+import { Project } from '../project';
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-notification-email',
@@ -8,6 +9,7 @@ import { Project } from './project';
 })
 export class NotificationEmailComponent implements OnInit {
   @Input() project: Project;
+  @Input() contact: Contact;
 
   constructor() {}
 

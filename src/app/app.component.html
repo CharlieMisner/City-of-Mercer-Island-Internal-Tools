@@ -7,6 +7,9 @@
       <div class="project-info-container">
         <h3 color="primary">Inputs</h3>
         <md-input-container>
+          <input md-input placeholder="Contact Email" [(ngModel)] = "contact.email">
+        </md-input-container><br />
+        <md-input-container>
           <input md-input placeholder="Permit Number" [(ngModel)] = "project.permitNumber">
         </md-input-container><br />
         <md-input-container>
@@ -47,4 +50,4 @@
         
       </div>
 </div>
-<app-notification-email [project]="project"></app-notification-email>
+<app-notification-email [project]="project" [contact]="contact"></app-notification-email>

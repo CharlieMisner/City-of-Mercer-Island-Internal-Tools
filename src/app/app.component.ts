@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-class Project {
-  projectName= 'A Building';
-  permitNumber = '1611-089';
-  address = 'Somewhere';
-  buildingStatus = 'WCI';
-  planningStatus = 'WCI';
-  engineeringStatus = 'APPROVED';
-  treeStatus = 'NA';
-  fireStatus = 'IN REVIEW'
-}
+import { Project } from './project';
+import { Contact } from './contact';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +10,11 @@ class Project {
 export class AppComponent implements OnInit {
 statuses: String[];
 project: Project;
+contact: Contact;
   constructor(){
     this.statuses= ['WCI', 'IN REVIEW', 'APPROVED', 'NA'];
-    this.project = new Project()
+    this.project = new Project();
+    this.contact = new Contact();
     console.log(this.project)
   }
 
