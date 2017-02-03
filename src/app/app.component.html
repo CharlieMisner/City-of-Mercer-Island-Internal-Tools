@@ -21,7 +21,6 @@
       </div>
       <div class="project-info-container">
         <h3>Permit Status</h3>
-        
           <md-select [(ngModel)] = "project.buildingStatus" color="primary" class="status-select" placeholder="Building Status">
             <md-option *ngFor = "let status of statuses" [value] = "status">
               {{status}}
