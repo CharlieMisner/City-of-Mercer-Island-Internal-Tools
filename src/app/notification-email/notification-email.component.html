@@ -1,7 +1,7 @@
 <!-- READ ME: Inline styles are used to preserve formatting because HTML email template is sent as a string.-->
 
-<div class = "email-container" style = "margin-left: 270px;">  
-  <div class = "send-container" style = "width:800px; height: 15vh; float: top; border-bottom-style: solid">
+<div fxLayout = "column" class = "email-container" style = "height:100%">  
+  <div fxFlex = "10%" class = "send-container" style = "width:100%; float: top; border-bottom-style: solid">
     <div style = "padding: 15px">
       <label><strong>To:</strong></label>
       <span>{{contact.email}}</span>
@@ -11,23 +11,23 @@
       <span>Building Plan Review comments for {{project.address}}</span>
     </div>
   </div>
-  <div class = "email-body-container" style = "height:72vh; padding:20px; overflow: auto">
+  <div fxFlex = "90%" class = "email-body-container" style = "padding:20px; overflow: auto">
     <table style = "font-size:12px">
       <tr>
         <td><strong>Project:</strong></td>
-        <td><strong>{{project.projectName}}</strong></td>
+        <td style = "color:red; padding-left: 30px"><strong>{{project.projectName}}</strong></td>
       </tr>
       <tr>
         <td><strong>Location:</strong></td>
-        <td><strong>{{project.address}}</strong></td>
+        <td style = "color:red; padding-left: 30px"><strong>{{project.address}}</strong></td>
       </tr>
       <tr>
         <td><strong></strong></td>
-        <td><strong>Mercer Island, WA 98040</strong></td>
+        <td style = "padding-left: 30px"><strong>Mercer Island, WA 98040</strong></td>
       </tr>
       <tr>
         <td><strong>Permit Application Number:</strong></td>
-        <td><strong>{{project.permitNumber}}</strong></td>
+        <td style = "color:red; padding-left: 30px"><strong>{{project.permitNumber}}</strong></td>
       </tr>
     </table>
     <p style = "font-size:12px">
@@ -70,13 +70,8 @@
       replied and published your response to each of the comments, you may resubmit 
       the corrected project documents. Please upload a new, complete set of corrected 
       drawings and any other supplemental documentation to the City of Mercer Island 
-      FTP site here: Mercer Island FTP Site. Enter “guest” as username, and “eplan” as 
-      the password.
-    </p>
-    <p style = "font-size:12px">
-      It is important that each of the comments have a reply. Your resubmittal date 
-      and review timeline begins only when all of the replies have been made and a new, 
-      complete set of corrected drawings and other supporting information is provided.
+      FTP site here: <a style = "color:blue" href = "https://sftp.mercergov.org/thinclient/Login.aspx">
+      Mercer Island FTP Site</a>. Enter “<strong>guest</strong>” as username, and “<strong>eplan</strong>” as the password.
     </p>
     <p style = "font-size:12px">
       It is important that each of the comments have a reply. Your resubmittal date and
@@ -85,7 +80,8 @@
     </p>
     <p style = "font-size:12px">
       Please see below for current review status (you can also check online at 
-      https://permitsearch.mybuildingpermit.com):
+      <a style = "color:blue" href = "https://permitsearch.mybuildingpermit.com/">
+        https://permitsearch.mybuildingpermit.com</a>):
     </p>
     <p style = "font-size:12px">
       Please DO NOT reply to this email or contact me regarding the status of the project. 
@@ -135,7 +131,8 @@
       noted as IN REVIEW), you may resubmit your corrected ePlan. Ensure that you have 
       replied to each of the correction comments—remember to click “Publish”—and made the 
       required changes to your project. Upload the complete revised drawing set with any 
-      additional supporting information to the Mercer Island FTP Site. You will be contacted 
+      additional supporting information to the  <a style = "color:blue" href = "https://sftp.mercergov.org/thinclient/Login.aspx">
+      Mercer Island FTP Site</a>. You will be contacted 
       by email within 3 working days acknowledging receipt of your resubmittal.
     </p>
   </div>

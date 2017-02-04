@@ -1,9 +1,11 @@
-<div class = "title-container">
-    <h1 class="app-title">
-      {{title}}
-    </h1>
-</div>
-<div class = "inputs-container">
+<div fxLayout="column" class = "app">  
+  <div fxLayout="column" fxFlex = "10%" class = "title-container"> 
+      <h1 class="app-title" fxFlex = "100%">
+        {{title}}
+      </h1>
+  </div>
+  <div fxLayout = "row" fxFlex = "90%">
+    <div fxFlex = "25%" class = "inputs-container">
       <div class="project-info-container">
         <h3 color="primary">Inputs</h3>
         <md-input-container>
@@ -46,7 +48,8 @@
               {{status}}
             </md-option>
           </md-select>
-        
       </div>
+    </div>
+    <app-notification-email  fxFlex = "75%" [project]="project" [contact]="contact"></app-notification-email>
+  </div>
 </div>
-<app-notification-email [project]="project" [contact]="contact"></app-notification-email>

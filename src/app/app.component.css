@@ -1,6 +1,8 @@
+.app{
+  height:100vh;
+}
 .title-container {
   width:100%;
-  height:7vh;
   color: white;
   background-color: #303F9F;
   padding-right:0px;
@@ -14,12 +16,10 @@
   margin:0;
 }
 .inputs-container{
-  width:250px;
   padding-left: 0px;
   padding-right: 20px;
   box-shadow: 5px 0 12px -1px #888;
   float:left;
-  height: 93vh;
 }
 .project-info-container{
   width: 90%;
