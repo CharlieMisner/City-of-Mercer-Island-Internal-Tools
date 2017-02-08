@@ -24,9 +24,11 @@
 }
 .inputs-container{
   padding-left: 0px;
-  padding-right: 20px;
+  padding-right:20px;
   box-shadow: 5px 0 12px -1px #888;
   float:left;
+  overflow-x: hidden;
+  overflow-y: auto
 }
 .project-info-container{
   width: 90%;
@@ -37,6 +39,12 @@
 .status-select {
   width:100%;
   margin-top: 30px
+}
+
+.submission-select {
+  margin-top:16px;
+  margin-bottom:16px;
+  width:100%;
 }
 
 .project-info {

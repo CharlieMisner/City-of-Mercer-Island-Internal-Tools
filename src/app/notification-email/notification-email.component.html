@@ -1,7 +1,7 @@
 <!-- READ ME: Inline styles are used to preserve formatting because HTML email template is sent as a string.-->
 
-<div fxLayout = "column" class = "email-container" style = "height:100%">  
-  <div fxFlex = "10%" class = "send-container" style = "width:100%; float: top; border-bottom-style: solid">
+<div fxLayout = "column" class = "email-container" style = "height:100%; overflow-x: hide">  
+  <div fxFlex = "10%" class = "send-container" style = "width:100%; float: top; border-bottom-style: solid; overflow-x: hide">
     <div style = "padding: 15px">
       <label><strong>To:</strong></label>
       <span>{{contact.email}}</span>
@@ -11,7 +11,7 @@
       <span>Building Plan Review comments for {{project.address}}</span>
     </div>
   </div>
-  <div fxFlex = "90%" class = "email-body-container" style = "padding:20px; overflow: auto">
+  <div fxFlex = "90%" class = "email-body-container" style = "padding:20px; overflow-y: auto; overflow-x: hide">
     <table style = "font-size:12px">
       <tr>
         <td><strong>Project:</strong></td>
@@ -47,8 +47,8 @@
       The Correction Drawing File can be reviewed and downloaded from the MIePlan Cloud here: 
     </p>
     <p style = "font-size:12px">
-      <a style = "color:blue" href = "https://mieplan.mercergov.org/adobe/eplan/~CurrentSharedReviews/{{project.permitNumber}}-SUB1-PLANS_review.pdf">
-      https://mieplan.mercergov.org/adobe/eplan/~CurrentSharedReviews/{{project.permitNumber}}-SUB1-PLANS_review.pdf
+      <a style = "color:blue" href = "https://mieplan.mercergov.org/adobe/eplan/~CurrentSharedReviews/{{project.permitNumber}}-{{submissionNumber}}-PLANS_review.pdf">
+      https://mieplan.mercergov.org/adobe/eplan/~CurrentSharedReviews/{{project.permitNumber}}-{{submissionNumber}}-PLANS_review.pdf
       </a>
     </p>
     <p style = "font-size:12px">

@@ -10,6 +10,7 @@ import { Contact } from '../contact';
 export class NotificationEmailComponent implements OnInit {
   @Input() project: Project;
   @Input() contact: Contact;
+  @Input() submissionNumber: string;
 
   constructor() {}
 

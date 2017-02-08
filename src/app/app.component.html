@@ -6,21 +6,26 @@
   </div>
   <div fxLayout = "row" fxFlex = "95%">
     <div fxFlex = "25%" class = "inputs-container">
-      <div class="project-info-container">
+      <form class="project-info-container">
         <h3 color="primary">Inputs</h3>
         <md-input-container>
-          <input md-input placeholder="Contact Email" [(ngModel)] = "contact.email">
+          <input md-input placeholder="Contact Email" [(ngModel)] = "contact.email" name="email" md-no-asterisk required>
         </md-input-container><br />
         <md-input-container>
-          <input md-input placeholder="Permit Number" [(ngModel)] = "project.permitNumber">
+          <input md-input placeholder="Permit Number" [(ngModel)] = "project.permitNumber" name="number" md-no-asterisk required>
         </md-input-container><br />
         <md-input-container>
-          <input md-input placeholder="Project Name" [(ngModel)] = "project.projectName">
+          <input md-input placeholder="Project Name" [(ngModel)] = "project.projectName" name="name" md-no-asterisk required>
         </md-input-container><br />
         <md-input-container>
-          <input md-input placeholder="Project Address" [(ngModel)] = "project.address">
+          <input md-input placeholder="Project Address" [(ngModel)] = "project.address" name="address" md-no-asterisk required >
         </md-input-container><br />
-      </div>
+        <md-select [(ngModel)] = "submissionNumber" name = "subnum" class = "submission-select" color="primary" placeholder="Submission Number" md-no-asterisk required>
+          <md-option *ngFor = "let sub of subs" [value] = "sub">
+            {{sub}}
+          </md-option>
+        </md-select>
+      </form>
       <div class="project-info-container">
         <h3>Permit Status</h3>
           <md-select [(ngModel)] = "project.buildingStatus" color="primary" class="status-select" placeholder="Building Status">
@@ -53,6 +58,6 @@
           </div>
       </div>
     </div>
-    <app-notification-email  fxFlex = "75%" [project]="project" [contact]="contact"></app-notification-email>
+    <app-notification-email  fxFlex = "75%" [project]="project" [contact]="contact" [submissionNumber]="submissionNumber"></app-notification-email>
   </div>
 </div>
