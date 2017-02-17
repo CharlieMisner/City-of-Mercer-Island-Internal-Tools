@@ -1,10 +1,11 @@
 export class Project {
   projectName= 'A Building';
-  permitNumber = '1604-280';
+  permitNumber = '1611-089';
   address = 'Somewhere';
   buildingStatus = 'WCI';
   planningStatus = 'WCI';
   engineeringStatus = 'APPROVED';
   treeStatus = 'NA';
   fireStatus = 'IN REVIEW'
+  submissionNumber = 'SUB1'
 }

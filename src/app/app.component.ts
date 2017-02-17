@@ -17,9 +17,7 @@ submissionNumber: string;
     this.statuses= ['WCI', 'IN REVIEW', 'APPROVED', 'NA'];
     this.subs = ['SUB1', 'SUB2', 'SUB3', 'SUB4', 'SUB5', 'SUB6', 'SUB7', 'SUB8'];
     this.project = new Project();
-    this.contact = new Contact();
-    this.submissionNumber;
-    console.log(this.submissionNumber)
+    this.contact = new Contact()
   }
 
   ngOnInit(){

@@ -7,11 +7,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { NotificationEmailComponent } from './notification-email/notification-email.component';
+import { EmailInputsComponent } from './email-inputs/email-inputs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotificationEmailComponent
+    NotificationEmailComponent,
+    EmailInputsComponent
   ],
   imports: [
     BrowserModule,

@@ -5,59 +5,7 @@
       </h1>
   </div>
   <div fxLayout = "row" fxFlex = "95%">
-    <div fxFlex = "25%" class = "inputs-container">
-      <form class="project-info-container">
-        <h3 color="primary">Inputs</h3>
-        <md-input-container>
-          <input md-input placeholder="Contact Email" [(ngModel)] = "contact.email" name="email" md-no-asterisk required>
-        </md-input-container><br />
-        <md-input-container>
-          <input md-input placeholder="Permit Number" [(ngModel)] = "project.permitNumber" name="number" md-no-asterisk required>
-        </md-input-container><br />
-        <md-input-container>
-          <input md-input placeholder="Project Name" [(ngModel)] = "project.projectName" name="name" md-no-asterisk required>
-        </md-input-container><br />
-        <md-input-container>
-          <input md-input placeholder="Project Address" [(ngModel)] = "project.address" name="address" md-no-asterisk required >
-        </md-input-container><br />
-        <md-select [(ngModel)] = "submissionNumber" name = "subnum" class = "submission-select" color="primary" placeholder="Submission Number" md-no-asterisk required>
-          <md-option *ngFor = "let sub of subs" [value] = "sub">
-            {{sub}}
-          </md-option>
-        </md-select>
-      </form>
-      <div class="project-info-container">
-        <h3>Permit Status</h3>
-          <md-select [(ngModel)] = "project.buildingStatus" color="primary" class="status-select" placeholder="Building Status">
-            <md-option *ngFor = "let status of statuses" [value] = "status">
-              {{status}}
-            </md-option>
-          </md-select>
-          <md-select [(ngModel)] = "project.planningStatus" class="status-select" placeholder="Planning Status">
-            <md-option *ngFor = "let status of statuses" [value] = "status">
-              {{status}}
-            </md-option>
-          </md-select>
-          <md-select [(ngModel)] = "project.engineeringStatus" class="status-select" placeholder="Enginering Status">
-            <md-option *ngFor = "let status of statuses" [value] = "status">
-              {{status}}
-            </md-option>
-          </md-select>
-          <md-select [(ngModel)] = "project.treeStatus" class="status-select" placeholder="Tree Status">
-            <md-option *ngFor = "let status of statuses" [value] = "status">
-              {{status}}
-            </md-option>
-          </md-select>
-          <md-select [(ngModel)] = "project.fireStatus" class="status-select" placeholder="Fire Status">
-            <md-option *ngFor = "let status of statuses" [value] = "status">
-              {{status}}
-            </md-option>
-          </md-select>
-          <div class = "button-container" fxLayout = "column" fxLayout = "center">
-            <button md-raised-button color="primary"  fxFlex = "50%">SEND</button>
-          </div>
-      </div>
-    </div>
-    <app-notification-email  fxFlex = "75%" [project]="project" [contact]="contact" [submissionNumber]="submissionNumber"></app-notification-email>
+    <app-email-inputs  fxFlex = "25%" [project]="project" [contact]="contact"></app-email-inputs>
+    <app-notification-email  fxFlex = "75%" [project]="project" [contact]="contact"></app-notification-email>
   </div>
 </div>
