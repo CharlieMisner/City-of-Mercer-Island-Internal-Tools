@@ -17,7 +17,11 @@ export class EmailInputsComponent implements OnInit {
     this.statuses= ['WCI', 'IN REVIEW', 'APPROVED', 'NA'];
     this.subs = ['SUB1', 'SUB2', 'SUB3', 'SUB4', 'SUB5', 'SUB6', 'SUB7', 'SUB8']
   }
-
+  
+  sendEmail() {
+    console.log('Email Sent!');
+  }
+  
   ngOnInit() {
   }
 
