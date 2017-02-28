@@ -1,6 +1,7 @@
 .inputs-container{
   padding-left: 0px;
   padding-right:20px;
+  height: 100%;
   box-shadow: 5px 0 12px -1px #888;
   float:left;
   overflow-x: hidden;

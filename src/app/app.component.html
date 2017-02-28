@@ -1,10 +1,10 @@
 <div fxLayout="column" class = "app">  
-  <div fxLayout="column" fxLayoutAlign = "center" fxFlex = "5%" class = "title-container"> 
+  <div fxLayout="column" fxLayoutAlign = "center" class = "title-container"> 
       <h1 class="app-title" fxFlex = "50%">
         {{title}}
       </h1>
   </div>
-  <div fxLayout = "row" fxFlex = "95%">
+  <div fxLayout = "row" fxFlex = "100%">
     <app-email-inputs  fxFlex = "25%" [project]="project" [contact]="contact"></app-email-inputs>
     <app-notification-email  fxFlex = "75%" [project]="project" [contact]="contact"></app-notification-email>
   </div>
