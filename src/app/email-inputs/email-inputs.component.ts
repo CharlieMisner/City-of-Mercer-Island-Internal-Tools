@@ -14,14 +14,14 @@ export class EmailInputsComponent implements OnInit {
   statuses: String[];
   subs: String[];
 
-  constructor( private http: Http) {
+  constructor(private http: Http) {
     this.statuses= ['WCI', 'IN REVIEW', 'APPROVED', 'NA'];
     this.subs = ['SUB1', 'SUB2', 'SUB3', 'SUB4', 'SUB5', 'SUB6', 'SUB7', 'SUB8']
   }
   
   sendEmail() {
     console.log('Attempt Send...');
-    this.http.post('http://localhost:8080/sendmail', 'test');
+    /*this.http.post('http://localhost:8080/sendmail');*/
   }
   
   ngOnInit() {
