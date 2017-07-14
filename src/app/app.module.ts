@@ -20,7 +20,7 @@ import { EmailInputsComponent } from './email-inputs/email-inputs.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot()
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
